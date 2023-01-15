@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here] (https://www.frontendmentor.io/solutions/stats-preview-card-component-4HjCVyrema)
-- Live Site URL: [Click here] (https://stats-card-component-three.vercel.app/)
+- Solution URL: https://www.frontendmentor.io/solutions/stats-preview-card-component-4HjCVyrema
+- Live Site URL: https://stats-card-component-three.vercel.app/
 
 ## My process
 
