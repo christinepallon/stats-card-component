@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    outline: none;
+}
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --paragaph: hsla(0, 0%, 100%, 0.75);
+    --stat-heading: hsla(0, 0%, 100%, 0.6);
+    --overlay: hsla(271, 59%, 57%, 0.6);
+  }
+
+  body {
+    background-color: var(--main-background);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .card {
+    color: var(--white);
+    margin: 1em;
+    display: flex;
+    flex-flow: column;
+    overflow: initial;
+    max-width: 25rem;
+    max-height: 90vh;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .image1 {
+    height: 15em;
+    width: 21.5em;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+  }
+
+  .image2 {
+    display: none;
+  }
+
+  .overlay {
+    display: inline-block;
+    position: relative;
+    background-color: var(--card-background)
+  }
+
+  .overlay:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--overlay);
+    max-height: 15em;
+    border-top-left-radius: 0.66em;
+    border-top-right-radius: 0.55em;
+    overflow: hidden;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-background);
+    border-bottom-left-radius: 0.75em;
+    border-bottom-right-radius: 0.75em;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.25em 1.5em .5em 1.5em;
+  }
+
+  .accent {
+    color: var(--accent)
+  }
+
+  .stat-heading {
+    color: var(--stat-heading);
+    text-transform: uppercase;
+  }
+
+  .description {
+    color: var(--paragaph);
+    line-height: 1.5em;
+    padding: 0 2.5em 1.5em 2.5em;
+    text-align: center;
+    font-size: .8rem;
+    font-family: 'Lexend Deca', sans-serif;
+  }
+
+  .stats, .stats-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  .stats-items {
+    padding-bottom: 1em
+  }
+
+  .stat-number {
+    font-weight: 900;
+  }
+
+  .stat-heading {
+    font-size: .75rem;
+    letter-spacing: .1em;
+    font-family: 'Lexend Deca', sans-serif;
+    padding-top: .5em;
+  }
+
+  .stats-items:nth-of-type(3) {
+    margin-bottom: 2em;
+  }
+
+  @media (min-width: 377px) {
+    .image1 {
+        display: none;
+    }
+    .image2 {
+        display: block;
+        max-width: 70vw;
+        min-height: 70vh;
+        border-bottom-right-radius: 0.8em;
+        border-top-right-radius: 0.8em;
+        border-bottom-left-radius: 0em;
+        border-top-left-radius: 0em;
+        
+    }
+
+    body {
+       justify-content: center;
+       width: 100%;
+    }
+    
+    .card {
+        flex-direction: row-reverse;
+        max-width: 70vw;
+        margin: 0 auto;
+    }
+
+    .text {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0.8em;
+        padding-right: 5em;
+    }
+
+    .overlay {
+        max-width: 100%;
+    }
+
+    .overlay:after {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0.66em;
+        border-bottom-right-radius: 0.55em;
+        max-height: 100%;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: row;
+        padding-left: 1.3em;
+        margin-left: 1em;
+    }
+
+    .stat-heading {
+        text-align: left;
+    }
+
+    .stat-number {
+    font-size: 1.3em;
+    text-align: left;
+   }
+
+    .stats {
+    padding-bottom: 2em;
+    padding-left: 0;
+    }
+
+    .stats-items {
+        padding-right: 1.5em;
+        align-items:flex-start
+    }
+
+
+    .stats-items:nth-of-type(1) {
+      padding-left: 1.8em;
+    }
+
+    .stats-items:nth-of-type(3) {
+    margin-bottom: 0;
+    }
+
+    .heading {
+      font-size: 1.75rem;
+      padding-top: 2em;
+      padding-bottom: 1em;
+      }
+
+    .heading, .description {
+      text-align: left;
+      }
+
+    .description {
+      padding-left: 2.8em;
+      padding-bottom: 4em;
+      line-height: 1.5rem;
+      font-size: .9rem;
+      }
+
+}
